@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chart Analyzer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Chart Analyzer</h1>
+    <button id="analyzeBtn">Analyze Chart</button>
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Analyzing chart...</p>
+    </div>
+    <div id="result" class="hidden">
+      <div class="result-header">
+        <h3>Analysis Result:</h3>
+        <button id="copyResultBtn" class="copy-btn" title="Copy analysis result">📋 Copy</button>
+      </div>
+      <div id="analysisText" class="analysis-text"></div>
+      <div id="jsonViewer" class="json-viewer hidden">
+        <div class="json-header">
+          <span>JSON View</span>
+          <button id="copyJsonBtn" title="Copy to clipboard">📋</button>
+        </div>
+        <pre id="jsonContent"></pre>
+      </div>
+    </div>
+    <div id="error" class="error hidden"></div>
+  </div>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
